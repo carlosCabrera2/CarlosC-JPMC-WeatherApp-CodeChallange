@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">CarlosC-JPMC-WeatherApp-CodeChallange</string>
+    <string name="weather_results">Weather Results</string>
+    <string name="name">Name:</string>
+    <string name="coordinates">Coordinates:</string>
+    <string name="timezone">Timezone:</string>
+    <string name="weather">Weather:</string>
+    <string name="clouds">Clouds:</string>
+    <string name="visibility">Visibility:</string>
+    <string name="wind">Wind:</string>
+    <string name="main_info">Main Info:</string>
+    <string name="weather_image">Weather Image</string>
+    <string name="search_instructions">To see the weather of a location, you must first SEARCH a location.
+                                       To search by city, town, and country code, please use a coma "," in
+                                       between each name. If you enabled location services, your location
+                                       will autopopulate in the search bar.
+                                        </string>
+    <string name="weather_app">WEATHER APP</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="timezone_data">TimeZone Data</string>
+    <string name="feels_like">Feels Like:</string>
+    <string name="main_feels_like">Feels Like</string>
+    <string name="humidity">Humidity:</string>
+    <string name="humityData">Humidity</string>
+    <string name="pressure">Pressure:</string>
+    <string name="pressureData">Pressure</string>
+    <string name="temp_max">Temp Max:</string>
+    <string name="temp_max_data">Temp Max Data</string>
+    <string name="temp_min">Temp Min:</string>
+    <string name="temp_min_data">Temp Min Data</string>
+    <string name="description">Description</string>
+    <string name="windyData">Windy?</string>
+    <string name="visibilityData">Visibility</string>
+    <string name="cloud_formation">Cloud Formation</string>
+    <string name="use_current_location">Use current location</string>
+</resources>

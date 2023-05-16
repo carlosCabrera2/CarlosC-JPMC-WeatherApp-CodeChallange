@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/weather_results"
+            android:background="@color/purple_200"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/name"
+            android:background="@color/light_purple"
+            android:textSize="20sp"
+             />
+
+            <ImageView
+                android:id="@+id/imageHolder"
+                android:layout_width="194dp"
+                android:layout_height="124dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/weather_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    >
+                    <TableRow
+                        android:background="#6FB4BCE1">
+                            <TextView
+                                android:id="@+id/coordinates"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/purple_200"
+                                android:padding="7dp"
+                                android:text="@string/coordinates"
+
+                                android:textSize="15sp"
+                               />
+                            <TextView
+                                android:id="@+id/coordinatesLat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/latitude"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/coordinatesLong"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/longitude"
+                                android:textSize="15sp"
+                                />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+
+                            <TextView
+                                android:id="@+id/timeZone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/timezone"
+                                android:background="@color/purple_200"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/timeZoneData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/timezone_data"
+                                android:textSize="15sp"
+                                />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:background="@color/purple_200"
+                                android:text="@string/feels_like"
+                                android:textSize="15sp"
+                               />
+
+                            <TextView
+                                android:id="@+id/mainFeelsLike"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/main_feels_like"
+                                android:textSize="15sp"
+                               />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+                        >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:background="@color/purple_200"
+                                android:text="@string/humidity"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/mainHumidity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/humityData"
+                                android:textSize="15sp"
+                                />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+                        >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:background="@color/purple_200"
+                                android:text="@string/pressure"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/mainPressure"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/pressureData"
+                                android:textSize="15sp"
+                                />
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:background="@color/purple_200"
+                                android:text="@string/temp_max"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/mainTempMaxData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/temp_max_data"
+                                android:textSize="15sp"
+                                />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:background="@color/purple_200"
+                            android:text="@string/temp_min"
+                            android:textSize="15sp"
+                            />
+
+                            <TextView
+                                android:id="@+id/mainTempMinData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/temp_min_data"
+                                android:textSize="15sp"
+                                />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+                            <TextView
+                                android:id="@+id/weather"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/weather"
+                                android:background="@color/purple_200"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/weatherDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/description"
+                                android:textSize="15sp"
+                                />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+
+                            <TextView
+                                android:id="@+id/clouds"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/clouds"
+                                android:background="@color/purple_200"
+                                android:textSize="15sp"
+                                 />
+
+                            <TextView
+                                android:id="@+id/cloudsData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="7dp"
+                                android:text="@string/cloud_formation"
+                                android:textSize="15sp"
+                                />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+                        <TextView
+                            android:id="@+id/visibility"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:text="@string/visibility"
+                            android:background="@color/purple_200"
+                            android:textSize="15sp"
+                             />
+
+                    <TextView
+                        android:id="@+id/visibilityData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:text="@string/visibilityData"
+                        android:textSize="15sp"
+                        />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#6FB4BCE1">
+
+                        <TextView
+                            android:id="@+id/wind"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:text="@string/wind"
+                            android:background="@color/purple_200"
+                            android:textSize="15sp"
+                         />
+
+                        <TextView
+                            android:id="@+id/windData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:text="@string/windyData"
+                            android:textSize="15sp"
+                            />
+
+                    </TableRow>
+            </TableLayout>
+    </LinearLayout>
+</ScrollView>

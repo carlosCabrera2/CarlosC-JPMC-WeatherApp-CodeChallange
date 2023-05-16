@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/search_menu">
+
+    <fragment
+        android:id="@+id/search_menu"
+        android:name="com.example.carlosc_jpmc_weatherapp_codechallange.View.SearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_search_page">
+
+        <action
+            android:id="@+id/action_search_menu_to_results_menu"
+            app:destination="@id/results_menu" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/results_menu"
+        android:name="com.example.carlosc_jpmc_weatherapp_codechallange.View.ResultsFragment"
+        android:label="Results"
+        tools:layout="@layout/fragment_results_page">
+
+
+        <action
+            android:id="@+id/action_results_menu_to_search_menu"
+            app:destination="@id/search_menu" />
+    </fragment>
+
+
+</navigation>

@@ -12,7 +12,7 @@
     <string name="weather_image">Weather Image</string>
     <string name="search_instructions">To see the weather of a location, you must first SEARCH a location.
                                        To search by city, town, and country code, please use a coma "," in
-                                       between each name. Your last location will autopopulate in the search
+                                       between each name. Your last search will autopopulate in the search
                                        bar If you enabled location services, click on the botton and your
                                        location will autopopulate in the search bar.
                                         </string>

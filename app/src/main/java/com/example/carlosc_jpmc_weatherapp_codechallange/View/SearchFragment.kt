@@ -35,14 +35,6 @@ class SearchFragment: BaseFragment(), SearchView.OnQueryTextListener {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-         //   fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
-         //   getUserLocation()
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -56,32 +48,37 @@ class SearchFragment: BaseFragment(), SearchView.OnQueryTextListener {
             getUserLocation()
         }
 
-        //the city form shared preferences and populate the search view
-        val savedSearch = requireContext().getSharedPreferences("LOCATION_NAME", Context.MODE_PRIVATE).getString("LOCATION_SEARCH",
-            Context.MODE_PRIVATE.toString())
 
-        savedSearch?.let {
-            binding.svSearchLocation.setQuery(savedSearch, false)
-        }
+            //the city form shared preferences and populate the search view
+            val savedSearch =
+                requireContext().getSharedPreferences("LOCATION_NAME", Context.MODE_PRIVATE)
+                    .getString(
+                        "LOCATION_SEARCH",
+                        Context.MODE_PRIVATE.toString()
+                    )
+
+            savedSearch?.let {
+                binding.svSearchLocation.setQuery(savedSearch, false)
+            }
 
         binding.svSearchLocation.setOnQueryTextListener(this)
 
         return binding.root
-
-
     }
 
 
 
     private fun getUserLocation() {
+
         val task = fusedLocationClient.lastLocation
         if (ActivityCompat.checkSelfPermission(
                 requireActivity(),
                 Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                        ) != PackageManager.PERMISSION_GRANTED &&
+            ActivityCompat.checkSelfPermission(
                 requireActivity(),
                 Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
+                         ) != PackageManager.PERMISSION_GRANTED
         ) {
             ActivityCompat.requestPermissions(
                 requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
@@ -91,8 +88,8 @@ class SearchFragment: BaseFragment(), SearchView.OnQueryTextListener {
         }
         task.addOnSuccessListener {
             it?.let {
-              //  appViewModel.getWeather(getCityName(it.latitude, it.longitude))
-                Toast.makeText(requireContext(), "Location services enabled", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),
+                    "Location services enabled", Toast.LENGTH_SHORT).show()
 
                 appViewModel.selectedLocation = getCityName(it.latitude, it.longitude)
                 Log.d(TAG, "getUserLocation: selectedLocation = ${appViewModel.selectedLocation}")
@@ -132,10 +129,8 @@ class SearchFragment: BaseFragment(), SearchView.OnQueryTextListener {
                     requireActivity(),
                     Manifest.permission.ACCESS_COARSE_LOCATION
                 ) == PackageManager.PERMISSION_GRANTED
-
             }
             else -> {}
-
         }
     }
 
@@ -145,21 +140,17 @@ class SearchFragment: BaseFragment(), SearchView.OnQueryTextListener {
             Toast.makeText(requireContext(),
                 "$query", Toast.LENGTH_LONG).show()
         }
-
         query?.let {
+
             // share preferences to save the search for the next launch
             requireContext().getSharedPreferences("LOCATION_NAME", Context.MODE_PRIVATE).edit().apply {
                 putString("LOCATION_SEARCH",  it)
             }.apply()
 
-
-
             appViewModel.selectedLocation = it
 
             findNavController().navigate(R.id.action_search_menu_to_results_menu)
-
         }
-
         return true
         }
 

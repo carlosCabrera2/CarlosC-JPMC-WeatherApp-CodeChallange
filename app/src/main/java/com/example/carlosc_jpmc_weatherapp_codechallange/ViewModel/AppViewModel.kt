@@ -25,8 +25,6 @@ class AppViewModel @Inject constructor(
     sharedPreferences: SharedPreferences
 ): ViewModel() {
 
-    val weatherImage = ""
-
     var selectedLocation: String? = sharedPreferences.getString("LOCATION_NAME",
         Context.MODE_PRIVATE.toString() )
 

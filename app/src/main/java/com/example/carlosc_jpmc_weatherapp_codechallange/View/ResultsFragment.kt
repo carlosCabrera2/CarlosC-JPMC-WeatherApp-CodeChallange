@@ -60,7 +60,7 @@ class ResultsFragment: BaseFragment() {
                         binding.coordinatesLat.text = it.coord?.lat.toString()
                         binding.coordinatesLong.text = it.coord?.lon.toString()
                         binding.timeZoneData.text = it.timezone.toString()
-                        binding.mainFeelsLike.text = it.main?.feelsLike.toString()
+                        binding.mainFeelsLike.text = (it.main?.feelsLike.toString() + "° fahrenheit")
                         binding.mainHumidity.text = (it.main?.humidity.toString() + "%")
                         binding.mainPressure.text = (it.main?.pressure.toString() + " Milibars")
                         binding.mainTempMaxData.text = (it.main?.tempMax.toString() + "° fahrenheit")
